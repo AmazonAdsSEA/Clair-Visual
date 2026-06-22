@@ -13,6 +13,8 @@ body { background: #0a0a0a; font-family: 'Inter', -apple-system, BlinkMacSystemF
 .nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: -0.035em; transition: color 0.2s; }
 .nav a:hover { color: #4d8aff; }
 .nav a.brand { color: #4d8aff; }
+.nav a.nav-highlight { color: #ffffff; font-weight: 700; background: rgba(77,138,255,0.12); padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(77,138,255,0.3); }
+.nav a.nav-highlight:hover { background: rgba(77,138,255,0.2); color: #ffffff; }
 .lang-toggle { display: inline-flex; align-items: center; gap: 0; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; overflow: hidden; margin-left: 8px; }
 .lang-btn { padding: 5px 12px; font-size: 12px; font-weight: 600; letter-spacing: 0; cursor: pointer; border: none; background: transparent; color: rgba(255,255,255,0.5); transition: all 0.2s; }
 .lang-btn.active { background: #0048f9; color: #ffffff; }
@@ -107,6 +109,16 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 .link-card a { display: inline-block; padding: 7px 14px; border: 1px solid rgba(0,72,249,0.4); border-radius: 8px; color: #4d8aff; font-size: 12px; font-weight: 600; text-decoration: none; margin-right: 8px; margin-bottom: 6px; }
 .link-card a:hover { background: rgba(0,72,249,0.1); }
 
+/* Live Demo Card */
+.demo-card { background: rgba(0,72,249,0.04); border: 1px solid rgba(77,138,255,0.25); border-radius: 14px; padding: 28px 32px; max-width: 600px; margin: 0 auto 48px; text-align: center; }
+.demo-card h4 { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: #ffffff; }
+.demo-card p { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 16px; line-height: 1.7; }
+.demo-card .demo-times { display: flex; justify-content: center; gap: 24px; margin-bottom: 18px; flex-wrap: wrap; }
+.demo-card .demo-time { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.7); }
+.demo-card .demo-time .lang-label { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; color: #ffffff; }
+.demo-card a.demo-btn { display: inline-block; padding: 10px 24px; background: #0048f9; border: none; border-radius: 10px; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+.demo-card a.demo-btn:hover { background: #0055ff; transform: translateY(-1px); }
+
 /* Footer */
 .footer { text-align: center; padding: 48px 40px; border-top: 1px solid rgba(255,255,255,0.06); }
 .footer p { color: rgba(255,255,255,0.35); font-size: 13px; }
@@ -141,10 +153,10 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     <a href="#overview" class="en">What Is It</a><a href="#overview" class="vi">Giới Thiệu</a><a href="#overview" class="cn">功能简介</a>
     <a href="#how" class="en">How It Works</a><a href="#how" class="vi">Cách Hoạt Động</a><a href="#how" class="cn">工作原理</a>
     <a href="#features" class="en">Features</a><a href="#features" class="vi">Tính Năng</a><a href="#features" class="cn">核心功能</a>
-    <a href="#interface" class="en">Guide</a><a href="#interface" class="vi">Hướng Dẫn</a><a href="#interface" class="cn">使用指南</a>
-    <a href="#samples" class="en">Samples</a><a href="#samples" class="vi">Mẫu</a><a href="#samples" class="cn">示例</a>
+    <a href="#interface" class="en nav-highlight">Guide</a><a href="#interface" class="vi nav-highlight">Hướng Dẫn</a><a href="#interface" class="cn nav-highlight">使用指南</a>
+    <a href="#samples" class="en nav-highlight">Samples</a><a href="#samples" class="vi nav-highlight">Mẫu</a><a href="#samples" class="cn nav-highlight">示例</a>
+    <a href="#apps" class="en nav-highlight">Apps</a><a href="#apps" class="vi nav-highlight">Ứng Dụng</a><a href="#apps" class="cn nav-highlight">应用工具</a>
     <a href="#formats" class="en">Ad Formats</a><a href="#formats" class="vi">Định Dạng QC</a><a href="#formats" class="cn">广告格式</a>
-    <a href="#apps" class="en">Apps</a><a href="#apps" class="vi">Ứng Dụng</a><a href="#apps" class="cn">应用工具</a>
     <a href="#tips" class="en">Tips</a><a href="#tips" class="vi">Mẹo Hay</a><a href="#tips" class="cn">实用技巧</a>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="switchLang('en')">EN</button>
@@ -319,6 +331,23 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     <p class="cn">将鼠标悬停在每个编号标记上查看步骤说明。</p>
   </div>
 
+  <!-- Live Demo Card -->
+  <div class="demo-card">
+    <h4 class="en">🎬 Live Demo Recording</h4>
+    <h4 class="vi">🎬 Video Demo Trực Tiếp</h4>
+    <h4 class="cn">🎬 实操演示录像</h4>
+    <p class="en">Watch a full walkthrough of Clair Visual in action — available in Vietnamese and English.</p>
+    <p class="vi">Xem hướng dẫn đầy đủ về cách sử dụng Clair Visual — có phiên bản Tiếng Việt và Tiếng Anh.</p>
+    <p class="cn">观看 Clair Visual 的完整操作演示 — 提供越南语和英语版本。</p>
+    <div class="demo-times">
+      <div class="demo-time"><span class="lang-label">VI</span> 00:00 – 16:30</div>
+      <div class="demo-time"><span class="lang-label">EN</span> 16:45 – 30:00</div>
+    </div>
+    <span class="en"><a href="https://amazon-advertising.app.gong.io/e/c-share/?tkn=3c5d9kyh3d7awink1fch5tp9" target="_blank" class="demo-btn">▶ Watch Live Demo</a></span>
+    <span class="vi"><a href="https://amazon-advertising.app.gong.io/e/c-share/?tkn=3c5d9kyh3d7awink1fch5tp9" target="_blank" class="demo-btn">▶ Xem Demo Trực Tiếp</a></span>
+    <span class="cn"><a href="https://amazon-advertising.app.gong.io/e/c-share/?tkn=3c5d9kyh3d7awink1fch5tp9" target="_blank" class="demo-btn">▶ 观看实操演示</a></span>
+  </div>
+
   <div class="screenshot-container">
     <img src="interface_screenshot.png" alt="Clair Visual PartyRock Interface">
 
@@ -460,7 +489,28 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
 
 <div class="divider"></div>
 
-<!-- USE CASES BY AD FORMAT -->
+<!-- APPS (moved before Ad Formats) -->
+<section id="apps" class="section">
+  <div class="section-header">
+    <div class="badge"><span class="badge-dot"></span> <span class="en">Apps &amp; Tools</span><span class="vi">Ứng Dụng &amp; Công Cụ</span><span class="cn">应用与工具</span></div>
+    <h2 class="en">Open the apps</h2>
+    <h2 class="vi">Mở ứng dụng</h2>
+    <h2 class="cn">打开应用</h2>
+    <p class="en">Everything you need to go from prompt to final creative asset.</p>
+    <p class="vi">Tất cả những gì bạn cần để đi từ prompt đến creative asset hoàn chỉnh.</p>
+    <p class="cn">从提示词到最终创意素材，一站式满足所有需求。</p>
+  </div>
+
+  <div class="link-grid">
+    <div class="link-card"><h4>Clair Visual Agent</h4><p class="en">The AI prompt generator — paste your product info and get optimized prompts for image, video, and animation.</p><p class="vi">AI tạo prompt — dán thông tin sản phẩm và nhận prompt tối ưu cho hình ảnh, video và animation.</p><p class="cn">AI 提示词生成器 — 粘贴产品信息，获取针对图像、视频和动画优化的提示词。</p><a href="https://partyrock.aws/u/dylanvn/e_2ZkSSpU/Clair-Visual-AI-That-Translates-Intent-Into-Visual-Prompt" target="_blank">Open on PartyRock →</a></div>
+    <div class="link-card"><h4>Amazon AI Studio</h4><p class="en">Generate images from your prompts. Paste Clair's enhanced image prompts here to produce static visuals.</p><p class="vi">Tạo hình ảnh từ prompt. Dán prompt hình ảnh nâng cao của Clair vào đây để tạo hình ảnh tĩnh.</p><p class="cn">根据提示词生成图像。将 Clair 的增强图像提示词粘贴到此处生成静态视觉素材。</p><a href="https://aistudio.amazon.com/studio" target="_blank">AI Studio →</a><a href="https://advertising.amazon.com/creative-studio/studio" target="_blank">Ads Console →</a></div>
+    <div class="link-card"><h4>Amazon Creative Agent</h4><p class="en">Generate videos from your prompts. Paste Clair's video/animation prompts here to produce motion assets.</p><p class="vi">Tạo video từ prompt. Dán prompt video/animation của Clair vào đây để tạo asset chuyển động.</p><p class="cn">根据提示词生成视频。将 Clair 的视频/动画提示词粘贴到此处生成动态素材。</p><a href="https://aistudio.amazon.com/creative-agent" target="_blank">Creative Agent →</a><a href="https://advertising.amazon.com/creative-studio/creative-agent" target="_blank">Ads Console →</a></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- USE CASES BY AD FORMAT (moved after Apps) -->
 <section id="formats" class="section">
   <div class="section-header">
     <div class="badge"><span class="badge-dot"></span> <span class="en">Ad Formats</span><span class="vi">Định Dạng Quảng Cáo</span><span class="cn">广告格式</span></div>
@@ -479,27 +529,6 @@ tbody tr:hover { background: rgba(255,255,255,0.02); }
     <div class="card"><h4 class="en">Streaming TV</h4><h4 class="vi">Streaming TV</h4><h4 class="cn">流媒体电视</h4><p class="en">Build cinematic scene sequences with mood, pacing, and brand consistency for premium video placements.</p><p class="vi">Xây dựng chuỗi cảnh điện ảnh với tâm trạng, nhịp độ và nhất quán thương hiệu cho vị trí video cao cấp.</p><p class="cn">构建具有氛围感、节奏感和品牌一致性的电影级场景序列，适用于高端视频广告位。</p><div class="tag">Video Prompt</div> <div class="tag">Image Prompt</div></div>
     <div class="card"><h4 class="en">Sponsored Products Video</h4><h4 class="vi">Sponsored Products Video</h4><h4 class="cn">商品推广视频</h4><p class="en">Transform existing product photography into subtle motion assets that stand out in search results.</p><p class="vi">Chuyển đổi ảnh sản phẩm hiện có thành asset chuyển động tinh tế nổi bật trong kết quả tìm kiếm.</p><p class="cn">将现有产品摄影转化为精致的动态素材，在搜索结果中脱颖而出。</p><div class="tag">Animation Prompt</div> <div class="tag">Chat Refinement</div></div>
     <div class="card"><h4 class="en">Creative Testing</h4><h4 class="vi">Creative Testing</h4><h4 class="cn">创意测试</h4><p class="en">Rapidly generate multiple visual concepts from a single product input for systematic A/B experimentation.</p><p class="vi">Nhanh chóng tạo nhiều concept hình ảnh từ một sản phẩm duy nhất để thử nghiệm A/B có hệ thống.</p><p class="cn">从单个产品输入快速生成多个视觉概念，用于系统化 A/B 实验。</p><div class="tag">Content Angles</div> <div class="tag">Enhanced Prompts</div></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- APPS -->
-<section id="apps" class="section">
-  <div class="section-header">
-    <div class="badge"><span class="badge-dot"></span> <span class="en">Apps &amp; Tools</span><span class="vi">Ứng Dụng &amp; Công Cụ</span><span class="cn">应用与工具</span></div>
-    <h2 class="en">Open the apps</h2>
-    <h2 class="vi">Mở ứng dụng</h2>
-    <h2 class="cn">打开应用</h2>
-    <p class="en">Everything you need to go from prompt to final creative asset.</p>
-    <p class="vi">Tất cả những gì bạn cần để đi từ prompt đến creative asset hoàn chỉnh.</p>
-    <p class="cn">从提示词到最终创意素材，一站式满足所有需求。</p>
-  </div>
-
-  <div class="link-grid">
-    <div class="link-card"><h4>Clair Visual Agent</h4><p class="en">The AI prompt generator — paste your product info and get optimized prompts for image, video, and animation.</p><p class="vi">AI tạo prompt — dán thông tin sản phẩm và nhận prompt tối ưu cho hình ảnh, video và animation.</p><p class="cn">AI 提示词生成器 — 粘贴产品信息，获取针对图像、视频和动画优化的提示词。</p><a href="https://partyrock.aws/u/dylanvn/e_2ZkSSpU/Clair-Visual-AI-That-Translates-Intent-Into-Visual-Prompt" target="_blank">Open on PartyRock →</a></div>
-    <div class="link-card"><h4>Amazon AI Studio</h4><p class="en">Generate images from your prompts. Paste Clair's enhanced image prompts here to produce static visuals.</p><p class="vi">Tạo hình ảnh từ prompt. Dán prompt hình ảnh nâng cao của Clair vào đây để tạo hình ảnh tĩnh.</p><p class="cn">根据提示词生成图像。将 Clair 的增强图像提示词粘贴到此处生成静态视觉素材。</p><a href="https://aistudio.amazon.com/studio" target="_blank">AI Studio →</a><a href="https://advertising.amazon.com/creative-studio/studio" target="_blank">Ads Console →</a></div>
-    <div class="link-card"><h4>Amazon Creative Agent</h4><p class="en">Generate videos from your prompts. Paste Clair's video/animation prompts here to produce motion assets.</p><p class="vi">Tạo video từ prompt. Dán prompt video/animation của Clair vào đây để tạo asset chuyển động.</p><p class="cn">根据提示词生成视频。将 Clair 的视频/动画提示词粘贴到此处生成动态素材。</p><a href="https://aistudio.amazon.com/creative-agent" target="_blank">Creative Agent →</a><a href="https://advertising.amazon.com/creative-studio/creative-agent" target="_blank">Ads Console →</a></div>
   </div>
 </section>
 
